@@ -90,4 +90,6 @@ Configure your phone numbers in the `.env` file using:
 
 ## License
 
-MIT
+GPU v3
+
+
