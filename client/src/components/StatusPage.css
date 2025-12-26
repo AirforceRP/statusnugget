@@ -1,0 +1,539 @@
+.status-page-flare {
+  background: #ffffff;
+  min-height: calc(100vh - 200px);
+  padding: 0;
+  transition: background-color 0.3s;
+}
+
+.error-message {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.error-message h2 {
+  font-size: 24px;
+  color: #ef4444;
+  margin-bottom: 16px;
+}
+
+.error-message p {
+  color: #6b7280;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.error-details {
+  font-size: 14px;
+  color: #9ca3af;
+  font-family: monospace;
+}
+
+.status-page-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.status-page-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.status-logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.rss-feed-btn {
+  background: #000;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.rss-feed-btn:hover {
+  background: #333;
+}
+
+.status-indicator {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.status-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.status-circle.status-operational {
+  background: #10b981;
+}
+
+.status-circle.status-degraded {
+  background: #f59e0b;
+}
+
+.status-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 10px 0;
+}
+
+.incident-history-link {
+  color: #667eea;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.incident-history-link:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+.live-status-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+.live-status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.live-status-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.timeframe-selector {
+  display: flex;
+  gap: 8px;
+}
+
+.timeframe-btn {
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.timeframe-btn:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.timeframe-btn.active {
+  background: #667eea;
+  border-color: #667eea;
+  color: white;
+}
+
+.status-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid #e5e7eb;
+  margin-bottom: 30px;
+}
+
+.status-tab {
+  background: transparent;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.2s;
+}
+
+.status-tab:hover {
+  color: #667eea;
+}
+
+.status-tab.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.service-item {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.service-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.service-name-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.service-status-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.service-status-icon.status-up {
+  background: #10b981;
+  color: white;
+}
+
+.service-status-icon.status-down {
+  background: #ef4444;
+  color: white;
+}
+
+.service-status-icon.status-degraded {
+  background: #f59e0b;
+  color: white;
+}
+
+.service-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.service-uptime-percentage {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.horizontal-uptime-bars {
+  width: 100%;
+}
+
+.horizontal-bars-grid {
+  display: flex;
+  gap: 2px;
+  height: 32px;
+  background: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.horizontal-bar {
+  flex: 1;
+  min-width: 2px;
+  height: 100%;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.horizontal-bar:hover {
+  opacity: 0.8;
+}
+
+.horizontal-bar.bar-up {
+  background: #10b981;
+}
+
+.horizontal-bar.bar-degraded {
+  background: #f59e0b;
+}
+
+.horizontal-bar.bar-down {
+  background: #ef4444;
+}
+
+.horizontal-bar.bar-no-data {
+  background: #e5e7eb;
+}
+
+.horizontal-uptime-bars-empty {
+  padding: 20px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.performance-placeholder {
+  padding: 40px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.incidents-section-flare {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.incidents-section-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 32px;
+}
+
+.past-incidents-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.incident-date-group {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 20px 0;
+}
+
+.incident-date-group:last-child {
+  border-bottom: none;
+}
+
+.incident-date-header {
+  margin-bottom: 12px;
+}
+
+.incident-date-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.incident-date-content {
+  padding-left: 0;
+}
+
+.no-incidents-text {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0;
+  font-style: italic;
+}
+
+.incident-update {
+  margin-bottom: 16px;
+  padding-left: 0;
+}
+
+.incident-update:last-child {
+  margin-bottom: 0;
+}
+
+.incident-update-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.incident-status-badge {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.incident-status-badge.status-up {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.incident-status-badge.status-down {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.incident-status-badge.status-degraded {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.incident-status-badge.status-investigating {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.incident-status-badge.status-resolved {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.incident-status-badge.status-scheduled {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.incident-status-badge.status-in-progress {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.incident-status-badge.status-completed {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.incident-update-title {
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.incident-service-badge {
+  background: #f3f4f6;
+  color: #4b5563;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.incident-update-description {
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 6px 0;
+}
+
+.incident-update-time {
+  color: #6b7280;
+  font-size: 13px;
+  margin: 4px 0 0 0;
+}
+
+@media (max-width: 768px) {
+  .status-page-header {
+    padding: 20px;
+  }
+
+  .status-title {
+    font-size: 28px;
+  }
+
+  .live-status-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .timeframe-selector {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .service-item {
+    padding: 16px;
+  }
+
+  .horizontal-bars-grid {
+    height: 24px;
+  }
+}
+
+.subscribe-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.subscribe-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(102, 126, 234, 0.25);
+}
+
+.subscribe-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.35);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.subscribe-button svg {
+  flex-shrink: 0;
+}
+
+.subscribe-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.subscribe-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(102, 126, 234, 0.25);
+}
+
+.subscribe-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.35);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.subscribe-button svg {
+  flex-shrink: 0;
+}

@@ -1,0 +1,55 @@
+.horizontal-uptime-bars {
+  width: 100%;
+}
+
+.horizontal-bars-grid {
+  display: flex;
+  gap: 2px;
+  height: 32px;
+  background: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.horizontal-bar {
+  flex: 1;
+  min-width: 3px;
+  height: 100%;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+/* Ensure bars are visible for shorter timeframes */
+.horizontal-bars-grid[data-days="7"] .horizontal-bar,
+.horizontal-bars-grid[data-days="30"] .horizontal-bar {
+  min-width: 4px;
+}
+
+.horizontal-bar:hover {
+  opacity: 0.8;
+  transform: scaleY(1.2);
+}
+
+.horizontal-bar.bar-up {
+  background: #10b981;
+}
+
+.horizontal-bar.bar-degraded {
+  background: #f59e0b;
+}
+
+.horizontal-bar.bar-down {
+  background: #ef4444;
+}
+
+.horizontal-bar.bar-no-data {
+  background: #e5e7eb;
+}
+
+.horizontal-uptime-bars-empty {
+  padding: 20px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+}
+

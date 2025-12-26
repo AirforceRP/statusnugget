@@ -1,0 +1,483 @@
+.subscribe-modal {
+  max-width: 700px;
+  width: 90%;
+}
+
+.modal-subtitle {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.subscribe-loading {
+  text-align: center;
+  padding: 40px 20px;
+  color: #6b7280;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subscribe-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subscribe-method-option {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #ffffff;
+}
+
+.subscribe-method-option:hover {
+  border-color: #667eea;
+  background: #f9fafb;
+}
+
+.subscribe-method-option.active {
+  border-color: #667eea;
+  background: #f0f4ff;
+}
+
+.subscribe-method-option input[type="radio"] {
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.method-label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.method-name {
+  font-weight: 600;
+  color: #111827;
+  font-size: 16px;
+}
+
+.method-hint {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.subscribe-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.subscribe-input-group label {
+  font-weight: 500;
+  color: #374151;
+  font-size: 14px;
+}
+
+.subscribe-input-group input {
+  padding: 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border-color 0.2s;
+}
+
+.subscribe-input-group input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.phone-input-wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.country-code-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 250px;
+  flex-shrink: 0;
+}
+
+.country-code-select-custom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 15px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  width: 100%;
+  font-family: inherit;
+}
+
+.country-code-select-custom:hover {
+  border-color: #667eea;
+}
+
+.country-code-select-custom:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.country-flag-display {
+  width: 24px;
+  height: 18px;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.country-code-text {
+  flex: 1;
+  text-align: left;
+  color: #111827;
+}
+
+.country-code-arrow {
+  font-size: 10px;
+  color: #6b7280;
+  transition: transform 0.2s;
+}
+
+.country-code-select-custom:hover .country-code-arrow {
+  color: #667eea;
+}
+
+.country-dropdown-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 998;
+  background: transparent;
+}
+
+.country-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  max-height: 300px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.country-dropdown-search {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.country-search-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.country-search-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.country-dropdown-list {
+  overflow-y: auto;
+  max-height: 250px;
+}
+
+.country-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.country-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.country-dropdown-item:hover {
+  background-color: #f9fafb;
+}
+
+.country-dropdown-item.selected {
+  background-color: #f0f4ff;
+}
+
+.country-item-flag {
+  width: 20px;
+  height: 15px;
+  border-radius: 2px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.country-item-code {
+  font-weight: 600;
+  color: #374151;
+  min-width: 50px;
+  flex-shrink: 0;
+}
+
+.country-item-name {
+  flex: 1;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.phone-input {
+  flex: 1;
+}
+
+.input-hint {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: -4px;
+}
+
+.subscribe-rss-info {
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.subscribe-rss-info p {
+  margin: 0 0 8px 0;
+  color: #374151;
+  font-size: 14px;
+}
+
+.rss-url {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.rss-url code {
+  background: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+  font-family: 'Courier New', monospace;
+  color: #667eea;
+}
+
+.subscribe-error {
+  padding: 12px;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  color: #991b1b;
+  font-size: 14px;
+}
+
+.subscribe-success {
+  padding: 12px;
+  background: #d1fae5;
+  border: 1px solid #a7f3d0;
+  border-radius: 6px;
+  color: #065f46;
+  font-size: 14px;
+}
+
+.subscribe-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.subscribe-cancel {
+  padding: 12px 24px;
+  border: 2px solid #e5e7eb;
+  background: #ffffff;
+  color: #374151;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.subscribe-cancel:hover {
+  border-color: #d1d5db;
+  background: #f9fafb;
+}
+
+.subscribe-submit {
+  padding: 12px 24px;
+  border: none;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.subscribe-submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+.subscribe-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Dark mode styles */
+.dark-mode .subscribe-method-option {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.dark-mode .subscribe-method-option:hover {
+  border-color: #818cf8;
+  background: #111827;
+}
+
+.dark-mode .subscribe-method-option.active {
+  border-color: #818cf8;
+  background: #1e1b4b;
+}
+
+.dark-mode .method-name {
+  color: #f9fafb;
+}
+
+.dark-mode .method-hint {
+  color: #9ca3af;
+}
+
+.dark-mode .subscribe-input-group label {
+  color: #d1d5db;
+}
+
+.dark-mode .subscribe-input-group input {
+  background: #1f2937;
+  border-color: #374151;
+  color: #f9fafb;
+}
+
+.dark-mode .subscribe-input-group input:focus {
+  border-color: #818cf8;
+}
+
+.dark-mode .country-code-select-custom {
+  background: #1f2937;
+  border-color: #374151;
+  color: #f9fafb;
+}
+
+.dark-mode .country-code-select-custom:hover {
+  border-color: #818cf8;
+}
+
+.dark-mode .country-code-text {
+  color: #f9fafb;
+}
+
+.dark-mode .country-code-arrow {
+  color: #9ca3af;
+}
+
+.dark-mode .country-code-select-custom:hover .country-code-arrow {
+  color: #818cf8;
+}
+
+.dark-mode .country-dropdown {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.dark-mode .country-dropdown-search {
+  border-bottom-color: #374151;
+}
+
+.dark-mode .country-search-input {
+  background: #111827;
+  border-color: #374151;
+  color: #f9fafb;
+}
+
+.dark-mode .country-search-input:focus {
+  border-color: #818cf8;
+}
+
+.dark-mode .country-dropdown-item {
+  border-bottom-color: #374151;
+}
+
+.dark-mode .country-dropdown-item:hover {
+  background-color: #111827;
+}
+
+.dark-mode .country-dropdown-item.selected {
+  background-color: #1e1b4b;
+}
+
+.dark-mode .country-item-code {
+  color: #d1d5db;
+}
+
+.dark-mode .country-item-name {
+  color: #9ca3af;
+}
+
+.dark-mode .input-hint {
+  color: #6b7280;
+}
+
+.dark-mode .subscribe-rss-info {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.dark-mode .subscribe-rss-info p {
+  color: #d1d5db;
+}
+
+.dark-mode .rss-url code {
+  background: #111827;
+  border-color: #374151;
+  color: #a78bfa;
+}
+
+.dark-mode .subscribe-cancel {
+  background: #1f2937;
+  border-color: #374151;
+  color: #d1d5db;
+}
+
+.dark-mode .subscribe-cancel:hover {
+  border-color: #4b5563;
+  background: #111827;
+}
+

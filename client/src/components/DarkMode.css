@@ -1,0 +1,181 @@
+/* Dark mode styles */
+.dark-mode .status-page-flare {
+  background: #111827;
+  color: #f9fafb;
+}
+
+.dark-mode .error-message h2 {
+  color: #f87171;
+}
+
+.dark-mode .error-message p {
+  color: #d1d5db;
+}
+
+.dark-mode .error-details {
+  color: #9ca3af;
+}
+
+.dark-mode .subscribe-button {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+  box-shadow: 0 4px 6px rgba(139, 92, 246, 0.3);
+}
+
+.dark-mode .subscribe-button:hover {
+  box-shadow: 0 6px 12px rgba(139, 92, 246, 0.4);
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+}
+
+.dark-mode .status-logo {
+  color: #f9fafb;
+}
+
+.dark-mode .status-title {
+  color: #f9fafb;
+}
+
+.dark-mode .incident-history-link {
+  color: #818cf8;
+}
+
+.dark-mode .incident-history-link:hover {
+  color: #a5b4fc;
+}
+
+.dark-mode .live-status-title {
+  color: #f9fafb;
+}
+
+.dark-mode .timeframe-btn {
+  background: #1f2937;
+  border-color: #374151;
+  color: #d1d5db;
+}
+
+.dark-mode .timeframe-btn:hover {
+  border-color: #818cf8;
+  color: #818cf8;
+}
+
+.dark-mode .timeframe-btn.active {
+  background: #818cf8;
+  border-color: #818cf8;
+  color: white;
+}
+
+.dark-mode .status-tab {
+  color: #9ca3af;
+}
+
+.dark-mode .status-tab:hover {
+  color: #818cf8;
+}
+
+.dark-mode .status-tab.active {
+  color: #818cf8;
+  border-bottom-color: #818cf8;
+}
+
+.dark-mode .status-tabs {
+  border-bottom-color: #374151;
+}
+
+.dark-mode .service-item {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.dark-mode .service-name {
+  color: #f9fafb;
+}
+
+.dark-mode .service-uptime-percentage {
+  color: #f9fafb;
+}
+
+.dark-mode .horizontal-bars-grid {
+  background: #111827;
+}
+
+.dark-mode .incidents-section-title {
+  color: #f9fafb;
+}
+
+.dark-mode .incident-date-title {
+  color: #f9fafb;
+}
+
+.dark-mode .incident-date-group {
+  border-bottom-color: #374151;
+}
+
+.dark-mode .no-incidents-text {
+  color: #9ca3af;
+}
+
+.dark-mode .incident-update-title {
+  color: #f9fafb;
+}
+
+.dark-mode .incident-update-description {
+  color: #d1d5db;
+}
+
+.dark-mode .incident-update-time {
+  color: #9ca3af;
+}
+
+.dark-mode .performance-stats {
+  background: #1f2937;
+}
+
+.dark-mode .performance-stat .stat-value {
+  color: #f9fafb;
+}
+
+.dark-mode .performance-chart {
+  background: #1f2937;
+}
+
+.dark-mode .performance-title {
+  color: #9ca3af;
+}
+
+.dark-mode .navbar {
+  background: #1f2937;
+  border-bottom-color: #374151;
+}
+
+.dark-mode .nav-logo {
+  background: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark-mode .nav-links a {
+  color: #d1d5db;
+}
+
+.dark-mode .nav-links a:hover {
+  color: #818cf8;
+}
+
+.dark-mode .footer {
+  background: #1f2937;
+  border-top-color: #374151;
+}
+
+.dark-mode .footer-text {
+  color: #9ca3af;
+}
+
+.dark-mode .rss-feed-btn {
+  background: #374151;
+  color: #f9fafb;
+}
+
+.dark-mode .rss-feed-btn:hover {
+  background: #4b5563;
+}
+
